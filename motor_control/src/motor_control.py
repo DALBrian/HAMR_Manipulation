@@ -9,9 +9,9 @@ import send_command
 import time
 from geometry_msgs.msg import Twist
 """
-Created on April 16  2023
 @author: Small Brian
 @email: dalbobo3122@gmail.com
+@date: 2023/04/16
 @version: 1.4
 @description: This file includes the correct kinematic and uses ROS parameter server for easily modification.
 This is the file used for control robot.
@@ -73,10 +73,6 @@ class command():
         move.motor2(int(self.rotating_speed[1][0]))
         move.motor3(int(self.rotating_speed[2][0]))
         move.motor4(int(self.rotating_speed[3][0]))
-        
-
-
-#
 
 if __name__ == '__main__':
     rospy.init_node('motor_control', anonymous=True)

@@ -48,8 +48,8 @@ the goal of this research is to integrate robotic arm and a omni-wheel chassis t
 ![tf_broadcaster](image/vehicle_tf_small.png)
 
 ## Folder function 
-1. config: Config file for rviz.
-2. amr_urdf: HAMR 3D model with movable joint/axis. Normally will not use this model to save computation power.
+1. config: Config file for rviz. Those will be used automatically based on the launch file.
+2. amr_urdf: HAMR 3D model with movable joint/axis. Normally I prone to not use this model to save computation power.
 3. dal_tf: Coordinate transform broadcaster. Open this before open LiDAR and SLAM.
 4. fromTopictoCSV: Save value from ROS Topic to CSV for post-processing.
 5. imu360: Self-made P+F IMU360-F99 IMU driver for ROS. Works with ICP-DAS J1939 gateway.
@@ -58,10 +58,6 @@ the goal of this research is to integrate robotic arm and a omni-wheel chassis t
 
 ![ROS_to_ARM_flowchart](image/ROS-to-ARM_flowchart_small.png)
 ![ROS_startup_flowchart](image/ROS_flowchart_small.png)
-
-
-
-
 
 ## Video
 [Demo video](https://drive.google.com/file/d/1FXoi4q90yTjT7BAU1lf2f6oE_PefTzcD/view?usp=drive_link)
