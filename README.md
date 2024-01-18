@@ -1,8 +1,8 @@
 # HAMR_Manipulation
-**This repo only contains main contribution of my work, other minor contribution and open-source ROS program (such as navigation package from ROS official) are not included, so directly download this repo and run it will not work**
+**This repo only contains main contribution of my work, other minor (but also important) contribution and open-source ROS program (such as navigation package from ROS official) are not included, so directly download this repo and run it will not work. I do hope this repo and documentation will help you.**
 
 ## Background
-We've studied the AMR (autonomous mobile robot) with robotic arm products that available in the market, most of them are heavy and only capable for light-weight manipulation. 
+We've studied most the commercial available AMR (autonomous mobile robot) with robotic arm products in the market are heavy and only capable for light-weight manipulation. I decided to make our own robot with high payload capacity but also in relative small scale and light weight.
 ![marketing](image/marketing_small.png)
 ## Objective Goal
 the goal of this research is to integrate robotic arm and a omni-wheel chassis that provides with hight payload, high accuracy and high speed, I call it HAMR (High payload Autonomous Mobile Robot)
@@ -16,6 +16,20 @@ the goal of this research is to integrate robotic arm and a omni-wheel chassis t
 4. Pepper fuch ODM30M-R2000 LiDAR
 5. Pepper fuch IMU360D-F99 IMU
 6. ICP-DAS GW-7238D J1939-Modbus TCP gateway
+
+
+#### Hardware Design
+![CAD_front](image/CAD_front_small.png)
+![CAD_top](image/CAD_top_small.png)
+
+#### Structure FEM Analysis
+![chassis_FEM](image/chassis_deformation_small.png)
+![shelf_FEM](image/shelf_deformation_small.png)
+
+#### Electricity Layout
+![electricity_layout](image/layout_small.png)
+
+#### Robot Assembly
 ![vehicle](image/vehicle_small.png)
 
 ### Software
@@ -23,11 +37,12 @@ the goal of this research is to integrate robotic arm and a omni-wheel chassis t
 2. C++ 9.0.4
 3. Python 3.8.10
 4. Hector SLAM (for map building)
+
 ![map_building](image/map_building_small.png)
 
 ### Prerequest
-1. All hardware work normal (power, signal and wire connection)
-2. Use CAD file to build TF broadcaster to get the coordinate trnasformation in ROS
+1. All hardware work normal (power, signal and wire connection).
+2. Use CAD file to determine the TF broadcaster value to get the coordinate trnasformation in ROS.
 
 ![tf_broadcaster](image/vehicle_tf_small.png)
 
@@ -37,7 +52,15 @@ the goal of this research is to integrate robotic arm and a omni-wheel chassis t
 3. dal_tf: Coordinate transform broadcaster. Open this before open LiDAR and SLAM.
 4. fromTopictoCSV: Save value from ROS Topic to CSV for post-processing.
 5. imu360: Self-made P+F IMU360-F99 IMU driver for ROS. Works with ICP-DAS J1939 gateway.
-6. kuka_control: Receive command from ROS topic and transmit to KUKA controller by TCP.
-7. motor_control: Receive velocity from ROS topic and do the inverse kinematic; Send the velocity command to brushless motor driver.
+6. motor_control: Receive velocity from ROS topic and do the inverse kinematic; Send the velocity command to brushless motor driver.
+7. kuka_control: Receive command from ROS topic and transmit to KUKA controller by TCP. The logic behind this program will be explained below.
 
- 
+![ROS_to_ARM_flowchart](image/ROS-to-ARM_flowchart_small.png)
+![ROS_startup_flowchart](image/ROS_flowchart_small.png)
+
+
+
+
+
+## Video
+[Demo video](https://drive.google.com/file/d/1FXoi4q90yTjT7BAU1lf2f6oE_PefTzcD/view?usp=drive_link)
