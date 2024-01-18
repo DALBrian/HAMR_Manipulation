@@ -42,7 +42,8 @@ the goal of this research is to integrate robotic arm and a omni-wheel chassis t
 
 ### Prerequest
 1. All hardware work normal (power, signal and wire connection).
-2. Use CAD file to determine the TF broadcaster value to get the coordinate trnasformation in ROS.
+2. Step 1 actually took me 3 months!
+3. Use CAD file to determine the TF broadcaster value to get the coordinate trnasformation in ROS.
 
 ![tf_broadcaster](image/vehicle_tf_small.png)
 
