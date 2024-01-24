@@ -37,6 +37,7 @@ the goal of this research is to integrate robotic arm and a omni-wheel chassis t
 2. C++ 9.0.4
 3. Python 3.8.10
 4. Hector SLAM (for map building)
+5. KUKA KCL EthernetKRL package (commercial package)
 
 ![map_building](image/map_building_small.png)
 
