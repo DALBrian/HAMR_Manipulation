@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 13 17:02:00 2023
-
 @author: Small Brian
 @email: dalbobo3122@gmail.com
+@date: 2023/04/16
+@version: 1.3
+@brief: This file contains function to read value from motor drivers for future use. Not integrated in other main file.
 """
 import modbus_tk.defines as cst
 class driver_read():

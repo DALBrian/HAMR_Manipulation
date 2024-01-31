@@ -2,12 +2,12 @@
 ### 20230411 ###
 import sys
 import numpy as np
-sys.path.append("../include/motor_control")
 import rospy
-import driver_connection
-import send_command
 import time
 from geometry_msgs.msg import Twist
+sys.path.append("../include/motor_control")
+import send_command
+import driver_connection
 """
 @author: Small Brian
 @email: dalbobo3122@gmail.com

@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 /*
+    @author: Small Brian
     @brief: Test str.find & str.substr function to treat arm's msg before public to ros.
 */
 
@@ -59,14 +60,12 @@ int main(int argc, char** argv){
         j4 = "<joint4>44.234</joint4>", j5 = "<joint5>55.234</joint5>", j6 = "<joint6>66.234</joint6>",
         px = "<PX>77.234</PX>", py = "<PY>88.234</PY>", pz = "<PZ>99.234</PZ>", 
         pa = "<PA>1.23</PA>", pb = "<PB>2.34</PB>", pc = "<PC>3.234</PC>";
-    /**fake msg: <joint1>11.234</joint1><joint2>22.234</joint2><joint3>33.234</joint3><joint4>44.234</joint4>
+    /**correct msg: <joint1>11.234</joint1><joint2>22.234</joint2><joint3>33.234</joint3><joint4>44.234</joint4>
     <joint5>55.234</joint5><joint6>66.234</joint6><PX>77.234</PX><PY>88.234</PY>
-    <PZ>99.234</PZ><PA>1.23</PA><PB>2.34</PB><PC>3.234</PC>**/
+    <PZ>99.234</PZ><PA>1.23</PA><PB>2.34</PB><PC>3.234</PC>**/ // for reference
     string msg = j1+j2+j3+j4+j5+j6+px+py+pz+pa+pb+pc;
     cout<<"msg: "<<msg<<endl;
     parse(msg);
     cout<<"new msg: "<<msg<<endl;
-   
-
     return 0;
 }

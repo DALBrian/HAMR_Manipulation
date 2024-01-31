@@ -1,20 +1,16 @@
 """
-Created on Mon Apr 15 2023
-
 @author: Small Brian
 @email: dalbobo3122@gmail.com
-Candicate for the final version.
-"""
-class send():
-    """
-    This class is used to control the movement of the vehicle, 
+@date: 2023/04/15
+@description: This class is used to control the movement of the vehicle, 
     and the speed commands are the same for each motor.
     Motor speed vary from 0~3000(RPM), divided the reduction ratio(10) will be the true speed.
     Direction of rotation is positive when vehicle moving forward(when facing the vehicle, KUKA controller on the right)
     If one of the motor speed needs to be modified, change the code as the following example:
         ex: self.master.execute(modbus_location(motor number), 6, command(Pn610=610), output_value = speed)
             self.master.execute(1, 6, 610, output_value = motor_speed1)
-    """
+"""
+class send():
     def __init__(self, driver_connection):
         self.master = driver_connection.master
     def stop(self):

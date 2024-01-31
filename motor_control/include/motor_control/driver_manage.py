@@ -2,7 +2,13 @@ import serial
 import modbus_tk
 import modbus_tk.defines as cst
 import modbus_tk.modbus_rtu as modbus_rtu
-
+"""
+@author: Small Brian
+@email: dalbobo3122@gmail.com
+@date: 2023/04/18
+@version: 1.1
+@brief: This file contains most-used setting function for the motor driver for future usa. Not integrated in other main file.
+"""
 class driver_manage():
     def __init__(self, PORT = 'COM7'):
         self.master = modbus_rtu.RtuMaster(serial.Serial(port=PORT, baudrate=9600, bytesize=8, parity='N', stopbits=1, xonxoff=0))

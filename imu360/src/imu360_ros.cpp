@@ -3,11 +3,9 @@
 #include <vector>
 #include <math.h>
 #include "/usr/local/include/modbus/modbus.h"
-// #include <modbus.h>
 #include <chrono>
 #include <ros/ros.h>
 #include <sensor_msgs/Imu.h>
-#include <imu360/imu2.h>
 #include <algorithm>
 #define g 9.81
 /**
@@ -107,7 +105,6 @@ void modbus_read::parse(){
     imu_msg2_.temp2 = msg_twos[41] / 10.0;
 
     imu_pub2_.publish(imu_msg2_);
-    // cout<<"published"<<endl;
 }
 void modbus_read::parse2(){
 
@@ -193,7 +190,6 @@ int main(int argc, char** argv){
     while(ros::ok()){
         modbus.read_input();
         ros::spinOnce();
-        // ros::spin();
     }
     return 0;
 }

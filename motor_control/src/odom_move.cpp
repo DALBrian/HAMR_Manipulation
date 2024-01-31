@@ -7,7 +7,7 @@
 @author: Small Brian
 @email: dalbobo3122@gmail.com
 @version: 1.2
-@description: Use the odometry data to move the robot for a certain distance to test the move_base algorithm.
+@description: Use the odometry data to move the robot for a specific distance to test the move_base algorithm.
 """
 using namespace std;
 class odom_move{

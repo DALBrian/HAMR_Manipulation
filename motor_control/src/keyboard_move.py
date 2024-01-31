@@ -9,6 +9,7 @@ sys.path.append('../include')
 @date: 2023/02/13
 @version: 1.0
 @brief: Use keyboard to control the robot by publishing Twist message
+w = forward; x = backward; a = left; d = right; r = rotate CCW; t = rotate CW; s = stop
 """
 
 if __name__ == '__main__':

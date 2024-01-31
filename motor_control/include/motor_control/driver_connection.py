@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 13 16:58:58 2023
-
 @author: Small Brian
 @email: dalbobo3122@gmail.com
+@date: 2023/02/13
+@version: 1.0
+@brief: Establish the connection with the driver
 """
 import serial
 import modbus_tk

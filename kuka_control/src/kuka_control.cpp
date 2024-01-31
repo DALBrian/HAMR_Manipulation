@@ -22,6 +22,16 @@ using namespace std;
  * @details Add axis control and arm axis limitation check and check isFinish flag before send to arm. Add clear vector axisAng
  * @author Small Brian
  * @date 2023/07/20
+ * @detail: stepmode
+    -------------------------------------------------------------------
+    | 0 | move axis 1 for +2 degree    | 1 | move axis 1 for -2 degree|
+    | 2 | move axis 2 for +2 degree    | 3 | move axis 2 for -2 degree|
+    | 4 | move axis 3 for +2 degree    | 5 | move axis 3 for -2 degree|
+    | 6 | move axis 4 for +2 degree    | 7 | move axis 4 for -2 degree|
+    | 8 | move axis 5 for +2 degree    | 9 | move axis 5 for -2 degree|
+    | 10| move axis 6 for +2 degree    | 11| move axis 6 for -2 degree|
+    | 12| move by Cartesian coordinate | 13| move by axis angle       |
+    -------------------------------------------------------------------
  **/
 class TCPConnect{
 public:
@@ -172,7 +182,7 @@ void TCPConnect::dataparse(){
         a4 = received_msg_.substr(p4 + l1, p44 - p4 - l1);
         a5 = received_msg_.substr(p5 + l1, p55 - p5 - l1);
         a6 = received_msg_.substr(p6 + l1, p66 - p6 - l1);
-        // cout<<"a1: "<<a1<<"a2: "<<a2<<"a3: "<<a3<<"a4: "<<a4<<"a5: "<<a5<<"a6: "<<a6<<endl;//For debug
+        // cout<<"a1: "<<a1<<"a2: "<<a2<<"a3: "<<a3<<"a4: "<<a4<<"a5: "<<a5<<"a6: "<<a6<<endl; //For debug
         check_sum1 = true;
     }else{check_sum1 = false;}
     

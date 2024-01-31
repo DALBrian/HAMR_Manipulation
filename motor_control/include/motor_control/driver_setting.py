@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 13 19:39:43 2023
-
 @author: Small Brian
 @email: dalbobo3122@gmail.com
+@date: 2023/04/16
+@version: 1.2
+@brief: This file contains most-used setting function for the motor driver for future use. Not integrated in other main file.
 """
 class driver_setting():
     def __init__(self, driver_connection):
