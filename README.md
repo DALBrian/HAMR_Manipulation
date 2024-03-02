@@ -91,6 +91,6 @@ EKF result of yaw, distance and velocity shown in below images.
 [Demo video](https://drive.google.com/file/d/1FXoi4q90yTjT7BAU1lf2f6oE_PefTzcD/view?usp=drive_link)
 
 ## Paper Publication
-My master thesis will be release 2028/12/25.
+My master thesis will be open for public access in 2028/12/25.
 
 [Thesis link](https://etheses.lib.ntust.edu.tw/thesis/detail/1e5d5809fc602f61cfb75ffa4aeaf6e1/)
