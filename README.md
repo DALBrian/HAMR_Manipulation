@@ -5,7 +5,8 @@
 We've studied most the commercial available AMR (autonomous mobile robot) with robotic arm products in the market are heavy and only capable for light-weight manipulation. I decided to make our own robot with high payload capacity but also in relative small scale and light weight.
 ![marketing](image/marketing_small.png)
 ## Objective Goal
-the goal of this research is to integrate robotic arm and a omni-wheel chassis that provides with hight payload, high accuracy and high speed, I call it HAMR (High payload Autonomous Mobile Robot)
+the goal of this research is to integrate robotic arm and a omni-wheel chassis that provides its high payload capability, high accuracy and high speed, I call it HAMR (High payload Autonomous Mobile Robot)
+Moreover, base on the chassis and robot, I added a Pepper Fuchs LiDAR (ODM30M-R2000) and 2 IMU sensors (Pepper Fuchs IMU360D, TAObotics HFI-A9) to perform Extended Kalman Filter for robot localization.
 
 
 ## Setup
@@ -44,11 +45,11 @@ the goal of this research is to integrate robotic arm and a omni-wheel chassis t
 ### Prerequest
 1. All hardware work normal (power, signal and wire connection).
 2. Step 1 actually took me 3 months!
-3. Use CAD file to determine the TF broadcaster value to get the coordinate trnasformation in ROS.
+3. Use CAD file to determine the TF broadcaster value to get the coordinate trnasformation in ROS. As dictionary "dal_tf" defined.
 
 ![tf_broadcaster](image/vehicle_tf_small.png)
 
-## Folder function 
+## Dictionary Explain
 1. config: Config file for rviz. Those will be used automatically based on the launch file.
 2. amr_urdf: HAMR 3D model with movable joint/axis. Normally I prone to not use this model to save computation power.
 3. dal_tf: Coordinate transform broadcaster. Open this before open LiDAR and SLAM.
@@ -60,5 +61,9 @@ the goal of this research is to integrate robotic arm and a omni-wheel chassis t
 ![ROS_to_ARM_flowchart](image/ROS-to-ARM_flowchart_small.png)
 ![ROS_startup_flowchart](image/ROS_flowchart_small.png)
 
-## Video
+## Extended Kalman Filter
+Extended Kalman Filter for robot localization has been well studied in the past decades. As a result, I will skip the derivative process of EKF in this case and only show the result of data fusion of LiDAR and IMUs.
+
+
+## Demo Video
 [Demo video](https://drive.google.com/file/d/1FXoi4q90yTjT7BAU1lf2f6oE_PefTzcD/view?usp=drive_link)
