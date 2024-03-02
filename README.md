@@ -58,12 +58,39 @@ Moreover, base on the chassis and robot, I added a Pepper Fuchs LiDAR (ODM30M-R2
 6. motor_control: Receive velocity from ROS topic and do the inverse kinematic; Send the velocity command to brushless motor driver.
 7. kuka_control: Receive command from ROS topic and transmit to KUKA controller by TCP. The logic behind this program will be explained below.
 
+ROS to Arm flowchart:
+
 ![ROS_to_ARM_flowchart](image/ROS-to-ARM_flowchart_small.png)
+
+
+Manipulate step flowchart:
+
 ![ROS_startup_flowchart](image/ROS_flowchart_small.png)
 
 ## Extended Kalman Filter
 Extended Kalman Filter for robot localization has been well studied in the past decades. As a result, I will skip the derivative process of EKF in this case and only show the result of data fusion of LiDAR and IMUs.
 
+### Experinment Setupt
+The setupt of the experinmental site is shown in the below images.
+
+![env setup](image/setup_1.png)
+![lidar_and_conercube](image/setup_2.png)
+
+
+### Result
+EKF result of yaw, distance and velocity shown in below images.
+
+![ekf_yaw](image/EKF_yaw_result.png)
+![ekf_distance](image/EKF_distance_result.png)
+![ekf_velocity](image/EKF_velocity_result.png)
 
 ## Demo Video
+|            Step 1             |            Step 2             |            Step 3             |            Step 4             |            Step 5             |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| ![step1](image/demo_step1.png)| ![step2](image/demo_step2.png)     | ![step3](image/demo_step3.png)     | ![step4](image/demo_step4.png)     |![step5](image/demo_step5.png)     |
 [Demo video](https://drive.google.com/file/d/1FXoi4q90yTjT7BAU1lf2f6oE_PefTzcD/view?usp=drive_link)
+
+## Paper Publication
+My master thesis will be release 2028/12/25.
+
+[Thesis link](https://etheses.lib.ntust.edu.tw/thesis/detail/1e5d5809fc602f61cfb75ffa4aeaf6e1/)
